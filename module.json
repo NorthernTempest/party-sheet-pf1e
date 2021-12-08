@@ -1,48 +1,26 @@
 {
-  "name": "module",
-  "title": "New Module",
-  "description": "",
-  "version": "This is auto replaced",
-  "library": "false",
-  "manifestPlusVersion": "1.0.0",
-  "minimumCoreVersion": "0.8.8",
-  "compatibleCoreVersion": "0.8.8",
-  "authors": [
-    {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
-    }
-  ],
-  "dependencies": [
-
-  ],
-  "conflicts": [
-    
-  ],
-  "esmodules": [
-    "/scripts/module.js"
-  ],
-  "scripts": [
-    "/scripts/lib/lib.js"
-  ],
-  "styles": [
-    "/styles/module.css"
-  ],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "languages/en.json"
-    }
-  ],
-  "url": "This is auto replaced",
-  "manifest": "This is auto replaced",
-  "download": "This is auto replaced",
-  "media": [
-    {
-      "type": "icon",
-      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
-    }
-  ]
+	"name": "party-sheet-pf1e",
+	"title": "Party Sheet for Pathfinder 1e",
+	"description": "Adds a type of npc character sheet that can handle groups of characters",
+	"authors": [
+		{
+			"name": "NorthernTempest",
+			"url": "https://github.com/NorthernTempest",
+			"discord": "NorthernTempest#7019"
+		}
+	],
+	"dependencies": [],
+	"conflicts": [],
+	"esmodules": ["/scripts/module.js"],
+	"scripts": ["/scripts/lib/lib.js"],
+	"styles": ["/styles/module.css"],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "languages/en.json"
+		}
+	],
+	"url": "This is autoreplaced",
+	"download": "This is autoreplaced"
 }
