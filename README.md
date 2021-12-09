@@ -7,4 +7,4 @@
 # Pathfinder 1e Party Sheet
 
 ## Changelog
-0.1
+0.1.0

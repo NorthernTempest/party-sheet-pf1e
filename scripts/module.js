@@ -1,7 +1,8 @@
-Hooks.once('init', async function() {
+Hooks.on('ready', async () => {
+	const PartySheetPf1NPC = (await import("./pf1e-party-sheet.js")).PartySheetPf1NPC;
 
-});
-
-Hooks.once('ready', async function() {
-
+	Actors.registerSheet("PF1", PartySheetPf1NPC, {
+		types: ["npc"],
+		makeDefault: false
+	})
 });
