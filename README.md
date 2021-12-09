@@ -4,8 +4,7 @@
 
 <!--- Forge Bazaar Install % Badge -->
 ![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fparty-sheet-pf1e&colorB=4aa94a)
-# FoundryVTT Module
-
-Does something, probably
+# Pathfinder 1e Party Sheet
 
 ## Changelog
+0.1

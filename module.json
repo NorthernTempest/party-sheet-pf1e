@@ -2,6 +2,11 @@
 	"name": "party-sheet-pf1e",
 	"title": "Party Sheet for Pathfinder 1e",
 	"description": "Adds a type of npc character sheet that can handle groups of characters",
+	"version": "This is auto replaced",
+	"library": "false",
+	"manifestPlusVersion": "1.0.0",
+	"minimumCoreVersion": "0.8.9",
+	"compatibleCoreVersion": "0.8.9",
 	"authors": [
 		{
 			"name": "NorthernTempest",
