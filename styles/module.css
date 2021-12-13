@@ -1,20 +1,14 @@
-.flexrow {
-	display: flex;
-	flex-flow: row;
-}
-
 .flexcolumn {
 	display: flex;
 	flex-flow: column;
 }
 
 .sheet-profile-img {
-	text-align: center
+	text-align: center;
 }
 
 .sheet-sidebar {
-	flex: 0 0 250px;
-	border-bottom: 2px groove #eeede0;
+	flex: 0 1 220px;
 	border-right: 2px groove #eeede0;
 }
 
@@ -22,4 +16,8 @@ img.sheet-profile {
 	border: none;
 	max-width: 220px;
 	max-height: 220px;
+}
+
+.warning {
+	color: darkred;
 }

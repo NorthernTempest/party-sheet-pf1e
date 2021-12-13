@@ -1,5 +1,11 @@
 {
 	"ps": {
-		"partyName": "Party Name"
+		"partyName": "Party Name",
+		"noAccesToSheet": "No Access to Sheet",
+		"party": "Party",
+		"inventory": "Inventory",
+		"quests": "Quests & XP",
+		"notes": "Notes",
+		"biography": "Biography"
 	}
 }
