@@ -1,10 +1,10 @@
 import constants from './constants.js';
 
-export class PartySheetPf1NPC extends game.pf1.applications.ActorSheetPFNPC {
+export class Party extends game.pf1.applications.ActorSheetPFNPC {
 	static DEFAULT_TOKEN = "icons/svg/mystery-man.svg";
 
 	get template() {
-		return "modules/party-sheet-pf1e/templates/pf1e-party-sheet.hbs";
+		return "modules/party-sheet-pf1e/templates/party.hbs";
 	}
 
 	static get defaultOptions() {

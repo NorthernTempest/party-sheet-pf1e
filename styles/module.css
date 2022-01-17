@@ -1,23 +1,23 @@
-.flexcolumn {
+.pf1e-party-sheet .flexcolumn {
 	display: flex;
 	flex-flow: column;
 }
 
-.sheet-profile-img {
+.pf1e-party-sheet .sheet-profile-img {
 	text-align: center;
 }
 
-.sheet-sidebar {
-	flex: 0 1 220px;
+.pf1e-party-sheet section.sheet-sidebar.sidebar{
+	flex: 0 0 180px;
 	border-right: 2px groove #eeede0;
 }
 
-img.sheet-profile {
+.pf1e-party-sheet img.sheet-profile {
 	border: none;
-	max-width: 220px;
-	max-height: 220px;
+	max-width: 160px;
+	max-height: 160px;
 }
 
-.warning {
+.pf1e-party-sheet .warning {
 	color: darkred;
 }

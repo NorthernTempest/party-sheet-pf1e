@@ -1,5 +1,6 @@
 {
 	"ps": {
+		"sheet": "Party Sheet",
 		"partyName": "Party Name",
 		"noAccesToSheet": "No Access to Sheet",
 		"party": "Party",
