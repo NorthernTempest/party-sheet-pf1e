@@ -2,92 +2,66 @@
 	<!-- Header -->
 	<header>
 		<h1 class="charname">
-			<input
-				name="name"
-				type="text"
-				value="{{actor.name}}"
-				placeholder="{{localize 'ps.partyName'}}"
-			/>
+			<input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'ps.partyName'}}" />
 		</h1>
 	</header>
 	<section class="sheet-lower flexrow">
 		<!-- Sidebar -->
 		<section class="sheet-sidebar sidebar">
 			<div class="sheet-profile-img">
-				<img
-					class="sheet-profile"
-					src="{{actor.img}}"
-					title="{{actor.name}}"
-					data-edit="img"
-				/>
+				<img class="sheet-profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img" />
 			</div>
 		</section>
 		<!-- Body -->
 		<section class="sheet-content content">
 			{{#unless actor.visible}}
-				<span class="warning">{{localize "ps.noAccesToSheet"}}</span>
+			<span class="warning">{{localize "ps.noAccesToSheet"}}</span>
 			{{/unless}}
 			{{#if actor.visible}}
-				<!--Nav Bar-->
-				<nav class="sheet-navigation tabs" data-group="primary">
-					<a class="item active" data-tab="party">
-						{{localize "ps.party"}}
-					</a>
-					<a class="item" data-tab="inventory">
-						{{localize "ps.inventory"}}
-					</a>
-					<a class="item" data-tab="quests">
-						{{localize "ps.quests"}}
-					</a>
-					<a class="item" data-tab="notes">
-						{{localize "ps.notes"}}
-					</a>
-					<a class="item" data-tab="biography">
-						{{localize "ps.biography"}}
-					</a>
-				</nav>
-				<section class="primary-body">
-					<!--Party-->
-					<div
-						class="tab party"
-						data-tab="party"
-						data-group="primary"
-					>
-						<p>This is the party tab</p>
+			<!--Nav Bar-->
+			<nav class="sheet-navigation tabs" data-group="primary">
+				<a class="item active" data-tab="party">
+					{{localize "ps.party"}}
+				</a>
+				<a class="item" data-tab="inventory">
+					{{localize "ps.inventory"}}
+				</a>
+				<a class="item" data-tab="quests">
+					{{localize "ps.quests"}}
+				</a>
+				<a class="item" data-tab="biography">
+					{{localize "ps.biography"}}
+				</a>
+				<a class="item" data-tab="notes">
+					{{localize "ps.notes"}}
+				</a>
+			</nav>
+			<section class="primary-body">
+				<!--Party-->
+				<div class="tab party" data-group="primary" data-tab="party">
+					<p>This is the party tab</p>
+				</div>
+				<!--Inventory-->
+				<div class="tab inventory" data-group="primary" data-tab="inventory">
+					<p>This is the inventory tab</p>
+				</div>
+				<!--Quests & XP-->
+				<div class="tab quests" data-group="primary" data-tab="quests">
+					<p>This is the quests &amp; xp tab</p>
+				</div>
+				<!--Biography-->
+				<div class="tab biography" data-group="primary" data-tab="biography">
+					<div class="primary-content">
+						{{editor content=data.details.biography.value target="data.details.biography.value" button=true owner=owner editable=editable}}
 					</div>
-					<!--Inventory-->
-					<div
-						class="tab inventory"
-						data-tab="inventory"
-						data-group="primary"
-					>
-						<p>This is the inventory tab</p>
+				</div>
+				<!--Notes-->
+				<div class="tab actor-notes flexcol" data-group="primary" data-tab="notes">
+					<div class="primary-content">
+						{{editor content=data.details.notes.value target="data.details.notes.value" button=true owner=owner editable=editable}}
 					</div>
-					<!--Quests & XP-->
-					<div
-						class="tab quests"
-						data-tab="quests"
-						data-group="primary"
-					>
-						<p>This is the quests &amp; xp tab</p>
-					</div>
-					<!--Notes-->
-					<div
-						class="tab notes"
-						data-tab="notes"
-						data-group="primary"
-					>
-						{{roll-editor content=data.details.notes.value target="data.details.notes.value" button=true owner=owner editable=editable}}
-					</div>
-					<!--Biography-->
-					<div
-						class="tab biography"
-						data-tab="biography"
-						data-group="primary"
-					>
-						{{roll-editor content=data.details.biography.value target="data.details.biography.value" button=true owner=owner editable=editable}}
-					</div>
-				</section>
+				</div>
+			</section>
 			{{/if}}
 		</section>
 	</section>
