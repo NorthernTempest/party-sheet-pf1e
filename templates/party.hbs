@@ -39,18 +39,18 @@
 			<section class="primary-body">
 				<!--Party-->
 				<div class="tab party" data-group="primary" data-tab="party">
-					<p>This is the party tab</p>
+					{{> "modules/party-sheet-pf1e/templates/parts/party.hbs"}}
 				</div>
 				<!--Inventory-->
 				<div class="tab inventory" data-group="primary" data-tab="inventory">
-					<p>This is the inventory tab</p>
+					{{> "modules/party-sheet-pf1e/templates/parts/inventory.hbs"}}
 				</div>
 				<!--Quests & XP-->
 				<div class="tab quests" data-group="primary" data-tab="quests">
-					<p>This is the quests &amp; xp tab</p>
+					{{> "modules/party-sheet-pf1e/templates/parts/quests.hbs"}}
 				</div>
 				<!--Biography-->
-				<div class="tab biography" data-group="primary" data-tab="biography">
+				<div class="tab biography flexcol" data-group="primary" data-tab="biography">
 					<div class="primary-content">
 						{{editor content=data.details.biography.value target="data.details.biography.value" button=true owner=owner editable=editable}}
 					</div>

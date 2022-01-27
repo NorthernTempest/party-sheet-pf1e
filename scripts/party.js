@@ -1,6 +1,6 @@
 import constants from './constants.js';
 
-export class Party extends game.pf1.applications.ActorSheetPFNPC {
+export class PartySheet extends game.pf1.applications.ActorSheetPFNPC {
 	static DEFAULT_TOKEN = "icons/svg/mystery-man.svg";
 
 	get template() {
@@ -22,8 +22,10 @@ export class Party extends game.pf1.applications.ActorSheetPFNPC {
 	async getData() {
 		console.log( "Party Sheet PF1e | getData" );
 
-		const sheetData = await super.getData();
+		const data = await super.getData();
+		
+		console.log(data);
 
-		return sheetData;
+		return data;
 	}
 }

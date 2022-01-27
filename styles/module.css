@@ -1,4 +1,4 @@
-.pf1e-party-sheet .flexcolumn {
+.pf1e-party-sheet .flexcol {
 	display: flex;
 	flex-flow: column;
 }
@@ -7,7 +7,7 @@
 	text-align: center;
 }
 
-.pf1e-party-sheet section.sheet-sidebar.sidebar{
+.pf1e-party-sheet section.sheet-sidebar.sidebar {
 	flex: 0 0 180px;
 	border-right: 2px groove #eeede0;
 }
@@ -20,4 +20,12 @@
 
 .pf1e-party-sheet .warning {
 	color: darkred;
+}
+
+.pf1e-party-sheet .flexcol.tab.active.biography, .pf1e-party-sheet .flexcol.tab.active.actor-notes {
+	height: 100vw;
+}
+
+.pf1e-party-sheet .flexcol.tab.active.biography .primary-content, .pf1e-party-sheet .flexcol.tab.active.actor-notes .primary-content {
+	height: 100vw;
 }
