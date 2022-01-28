@@ -1,3 +1,27 @@
 <section class="primary-content">
-	<h3>Mwhahahahahahaha</h3>
+	{{#if isGM}}
+	<div class="party-sheet-roller"></div>
+	{{/if}}
+	<table class="party-sheet-table">
+		<tr class="form-header">
+			<th>Name</th>
+			<th>AC/Tch/FF</th>
+			<th>Fort/Ref/Will</th>
+			<th>Remove</th>
+		</tr>
+		{{#each partyMembers as |member mId|}}
+		<tr>
+			<td>{{member.name}}</td>
+			<td>
+				{{member.data.data.attributes.ac.normal.total}}/{{member.data.data.attributes.ac.touch.total}}/{{member.data.data.attributes.ac.flatFooted.total}}
+			</td>
+			<td>
+				{{member.data.data.attributes.savingThrows.fort.total}}/{{member.data.data.attributes.savingThrows.ref.total}}/{{member.data.data.attributes.savingThrows.will.total}}
+			</td>
+			<td><data class="remove-member invisible" value="{{mId}}">
+				<i class="fas fa-times-circle" />
+			</data></td>
+		</tr>
+		{{/each}}
+	</table>
 </section>

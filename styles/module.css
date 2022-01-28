@@ -1,6 +1,6 @@
-.pf1e-party-sheet .flexcol {
-	display: flex;
-	flex-flow: column;
+.pf1e-party-sheet .invisible {
+	border: none;
+	background: none;
 }
 
 .pf1e-party-sheet .sheet-profile-img {
@@ -28,4 +28,8 @@
 
 .pf1e-party-sheet .flexcol.tab.active.biography .primary-content, .pf1e-party-sheet .flexcol.tab.active.actor-notes .primary-content {
 	height: 100vw;
+}
+
+.pf1e-party-sheet .party-sheet-table .form-header {
+	font-size: large;
 }
