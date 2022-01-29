@@ -1,26 +1,40 @@
 <section class="primary-content">
 	{{#if isGM}}
-	<div class="party-sheet-roller"></div>
+	<div class="party-sheet-roller flexrow">
+		<select></select>
+		<select></select>
+		<data class="roll-button"><i class="fas fa-thin fa-dice-d20"></i></data>
+	</div>
 	{{/if}}
 	<table class="party-sheet-table">
 		<tr class="form-header">
-			<th>Name</th>
-			<th>AC/Tch/FF</th>
-			<th>Fort/Ref/Will</th>
-			<th>Remove</th>
+			<th class="colLeft">Name</th>
+			<th class="colSmall colGroupLeft">AC</th>
+			<th class="colSmall colGroupCenter">Tch</th>
+			<th class="colSmall colGroupCenter">FF</th>
+			<th class="colSmall colGroupRight">CMD</th>
+			<th class="colSmall colGroupLeft">Fort</th>
+			<th class="colSmall colGroupCenter">Ref</th>
+			<th class="colSmall colGroupRight">Will</th>
+			<th class="colSmall colGroupLeft">Per</th>
+			<th class="colSmall colGroupRight">Sen</th>
+			<th class="colSmall">Remove</th>
 		</tr>
 		{{#each partyMembers as |member mId|}}
-		<tr>
-			<td>{{member.name}}</td>
-			<td>
-				{{member.data.data.attributes.ac.normal.total}}/{{member.data.data.attributes.ac.touch.total}}/{{member.data.data.attributes.ac.flatFooted.total}}
-			</td>
-			<td>
-				{{member.data.data.attributes.savingThrows.fort.total}}/{{member.data.data.attributes.savingThrows.ref.total}}/{{member.data.data.attributes.savingThrows.will.total}}
-			</td>
-			<td><data class="remove-member invisible" value="{{mId}}">
-				<i class="fas fa-times-circle" />
-			</data></td>
+		<tr class="hover">
+			<td class="colLeft">{{member.name}}</td>
+			<td class="colSmall colGroupLeft">{{member.data.data.attributes.ac.normal.total}}</td>
+			<td class="colSmall colGroupCenter">{{member.data.data.attributes.ac.touch.total}}</td>
+			<td class="colSmall colGroupCenter">{{member.data.data.attributes.ac.flatFooted.total}}</td>
+			<td class="colSmall colGroupRight">{{member.data.data.attributes.cmd.total}}</td>
+			<td class="colSmall colGroupLeft">{{member.data.data.attributes.savingThrows.fort.total}}</td>
+			<td class="colSmall colGroupCenter">{{member.data.data.attributes.savingThrows.ref.total}}</td>
+			<td class="colSmall colGroupRight">{{member.data.data.attributes.savingThrows.will.total}}</td>
+			<td class="colSmall colGroupLeft">{{member.data.data.skills.per.mod}}</td>
+			<td class="colSmall colGroupRight">{{member.data.data.skills.sen.mod}}</td>
+			<td class="colSmall"><data class="remove-member invisible" value="{{mId}}">
+					<i class="fas fa-times-circle" />
+				</data></td>
 		</tr>
 		{{/each}}
 	</table>

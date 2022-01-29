@@ -10,8 +10,8 @@ export class PartySheet extends game.pf1.applications.ActorSheetPFNPC {
 	static get defaultOptions() {
 		return mergeObject(super.defaultOptions, {
 			classes: ["pf1 sheet actor npc npc-sheet pf1e-party-sheet"],
-			width: 850,
-			height: 750,
+			width: 740,
+			height: 400,
 			dragDrop: [{ dropSelector: null }]
 		});
 	}

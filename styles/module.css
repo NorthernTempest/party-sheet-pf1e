@@ -1,3 +1,8 @@
+.pf1.sheet.actor.npc-sheet.pf1e-party-sheet {
+	min-height: 300px;
+	min-width: 680px;
+}
+
 .pf1e-party-sheet .invisible {
 	border: none;
 	background: none;
@@ -32,4 +37,54 @@
 
 .pf1e-party-sheet .party-sheet-table .form-header {
 	font-size: large;
+}
+
+.pf1e-party-sheet .party-sheet-table td:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+
+.pf1e-party-sheet .party-sheet-table .colLeft{
+	text-align: left;
+	padding-left: 4px;
+}
+
+.pf1e-party-sheet .party-sheet-table .colSmall{
+	width: 40px;
+}
+
+.pf1e-party-sheet .party-sheet-table .colGroupLeft{
+	border-right: none;
+}
+
+.pf1e-party-sheet .party-sheet-table .colGroupRight{
+	border-left: none;
+}
+
+.pf1e-party-sheet .party-sheet-table .colGroupCenter{
+	border-left: none;
+	border-right: none;
+}
+
+.pf1e-party-sheet .party-sheet-table .hover:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+
+.pf1e-party-sheet .party-sheet-roller {
+	padding: 4px;
+}
+
+.pf1e-party-sheet .party-sheet-roller select {
+	margin-right: 10px;
+}
+
+.pf1e-party-sheet .party-sheet-roller .roll-button {
+	flex: 0;
+}
+
+.pf1e-party-sheet .party-sheet-roller .roll-button .fas.fa-thin.fa-dice-d20 {
+	font-size: x-large;
+}
+
+.pf1e-party-sheet .party-sheet-roller .roll-button .fas.fa-thin.fa-dice-d20:hover {
+	color: darkred;
 }
