@@ -1,14 +1,25 @@
 <section class="primary-content">
 	{{#if isGM}}
 	<div class="party-sheet-roller flexrow">
-		<select></select>
-		<select></select>
-		<data class="roll-button"><i class="fas fa-thin fa-dice-d20"></i></data>
+		<select class="skill-select">
+			{{#each data.skills as |skill|}}
+			<option value="{{@key}}">{{skill.label}}</option>
+			{{/each}}
+		</select>
+		<data class="roll-skill-button"><i class="fas fa-thin fa-dice-d20"></i></data>
+		<select class="save-select">
+			{{#each data.attributes.savingThrows as |save|}}
+			<option value="{{@key}}">{{save.label}}</option>
+			{{/each}}
+		</select>
+		<data class="roll-save-button"><i class="fas fa-thin fa-dice-d20"></i></data>
 	</div>
 	{{/if}}
 	<table class="party-sheet-table">
 		<tr class="form-header">
 			<th class="colLeft">Name</th>
+			<th class="colSmall colGroupLeft">HP</th>
+			<th class="colSmall colGroupRight">Max</th>
 			<th class="colSmall colGroupLeft">AC</th>
 			<th class="colSmall colGroupCenter">Tch</th>
 			<th class="colSmall colGroupCenter">FF</th>
@@ -21,8 +32,16 @@
 			<th class="colSmall">Remove</th>
 		</tr>
 		{{#each partyMembers as |member mId|}}
-		<tr class="hover">
+		<tr class="hover member-row" id="m-{{mId}}">
 			<td class="colLeft">{{member.name}}</td>
+			<td class="colSmall colGroupLeft">
+				{{#if member.isOwner}}
+					<input type="number" id="hp-{{mId}}" class="inputColSmall hp-input" value="{{member.data.data.attributes.hp.value}}"></input>
+				{{else}}
+					{{member.data.data.attributes.hp.value}}
+				{{/if}}
+			</td>
+			<td class="colSmall colGroupRight">{{member.data.data.attributes.hp.max}}</td>
 			<td class="colSmall colGroupLeft">{{member.data.data.attributes.ac.normal.total}}</td>
 			<td class="colSmall colGroupCenter">{{member.data.data.attributes.ac.touch.total}}</td>
 			<td class="colSmall colGroupCenter">{{member.data.data.attributes.ac.flatFooted.total}}</td>
@@ -32,9 +51,11 @@
 			<td class="colSmall colGroupRight">{{member.data.data.attributes.savingThrows.will.total}}</td>
 			<td class="colSmall colGroupLeft">{{member.data.data.skills.per.mod}}</td>
 			<td class="colSmall colGroupRight">{{member.data.data.skills.sen.mod}}</td>
-			<td class="colSmall"><data class="remove-member invisible" value="{{mId}}">
-					<i class="fas fa-times-circle" />
-				</data></td>
+			<td class="colSmall">
+				<data class="remove-member invisible" value="{{mId}}">
+					<i class="fas fa-times-circle"></i>
+				</data>
+			</td>
 		</tr>
 		{{/each}}
 	</table>

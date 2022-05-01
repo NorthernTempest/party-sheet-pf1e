@@ -52,6 +52,10 @@
 	width: 40px;
 }
 
+.pf1e-party-sheet .party-sheet-table .colMed{
+	width: 80px;
+}
+
 .pf1e-party-sheet .party-sheet-table .colGroupLeft{
 	border-right: none;
 }
@@ -63,6 +67,15 @@
 .pf1e-party-sheet .party-sheet-table .colGroupCenter{
 	border-left: none;
 	border-right: none;
+}
+
+.pf1e-party-sheet .party-sheet-table .inputColSmall{
+	width: calc(100% - 4px);
+	margin-left: 4px;
+	background: none;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	text-align: center;
 }
 
 .pf1e-party-sheet .party-sheet-table .hover:hover {
@@ -77,14 +90,27 @@
 	margin-right: 10px;
 }
 
-.pf1e-party-sheet .party-sheet-roller .roll-button {
+.pf1e-party-sheet .party-sheet-roller .roll-save-button {
 	flex: 0;
 }
 
-.pf1e-party-sheet .party-sheet-roller .roll-button .fas.fa-thin.fa-dice-d20 {
+.pf1e-party-sheet .party-sheet-roller .roll-save-button .fas.fa-thin.fa-dice-d20 {
 	font-size: x-large;
 }
 
-.pf1e-party-sheet .party-sheet-roller .roll-button .fas.fa-thin.fa-dice-d20:hover {
+.pf1e-party-sheet .party-sheet-roller .roll-save-button .fas.fa-thin.fa-dice-d20:hover {
+	color: darkred;
+}
+
+.pf1e-party-sheet .party-sheet-roller .roll-skill-button {
+	flex: 0;
+	margin-right: 8px;
+}
+
+.pf1e-party-sheet .party-sheet-roller .roll-skill-button .fas.fa-thin.fa-dice-d20 {
+	font-size: x-large;
+}
+
+.pf1e-party-sheet .party-sheet-roller .roll-skill-button .fas.fa-thin.fa-dice-d20:hover {
 	color: darkred;
 }
